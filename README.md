@@ -1,1 +1,2 @@
-laravel-defaultsort
+## DefaultSort for Laravel models.
+
