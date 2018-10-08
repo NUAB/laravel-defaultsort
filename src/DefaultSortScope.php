@@ -42,27 +42,4 @@ class DefaultSortScope implements Scope
         }
     }
 
-    /**
-     * Remove the scope from the given Eloquent query builder.
-     *
-     * @param  \Illuminate\Database\Eloquent\Builder $builder
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @return void
-     */
-    public function remove(Builder $builder, Model $model)
-    {
-        $column = $model->defaultSortColumn;
-        $query = $builder->getQuery();
-
-        $query->wheres = collect($query->orders)->reject(function ($where) use ($column) {
-            return $this->isRemovedConstraint($where, $column);
-        })->values()->all();
-    }
-
-    protected function isRemovedConstraint($where, $column)
-    {
-        return $where['type'] == 'Null' && $where['column'] == $column;
-    }
-
-
 }
