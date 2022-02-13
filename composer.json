@@ -1,22 +1,20 @@
 {
-  "name": "heppykarlsson/laravel-defaultsort",
+  "name": "heppyekberg/laravel-defaultsort",
   "type": "component",
-  "license": "Apache-2.0",
   "description": "Laravel default sorting on eloquent models.",
-  "minimum-stability": "dev",
   "authors": [
     {
-      "name": "Heppy Karlsson",
-      "email": "dennispkarlsson@gmail.com"
+      "name": "Heppy Ekberg",
+      "email": "heppy@ekberg.nu"
     }
   ],
   "require": {
     "php": "^7.1|^8.0",
-    "laravel/framework": "^5.7|^6.0|^7.0|^8.0"
+    "laravel/framework": "^8.0|^9.0"
   },
   "autoload": {
     "psr-4": {
-      "HeppyKarlsson\\DefaultSort\\": "src/"
+      "HeppyEkberg\\DefaultSort\\": "src/"
     }
   }
 }

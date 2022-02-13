@@ -1,5 +1,5 @@
 <?php
-namespace HeppyKarlsson\DefaultSort;
+namespace HeppyEkberg\DefaultSort;
 
 use Exception;
 

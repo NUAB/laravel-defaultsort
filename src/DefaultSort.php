@@ -1,5 +1,5 @@
 <?php
-namespace HeppyKarlsson\DefaultSort;
+namespace HeppyEkberg\DefaultSort;
 
 /**
  * The DefaultSort trait is to set a default sort order for a model.
@@ -26,7 +26,7 @@ namespace HeppyKarlsson\DefaultSort;
  * ];
  * </code>
  *
- * @package HeppyKarlsson\DefaultSort
+ * @package HeppyEkberg\DefaultSort
  */
 trait DefaultSort
 {
