@@ -1,4 +1,5 @@
 <?php
+
 namespace HeppyEkberg\DefaultSort;
 
 use Illuminate\Database\Eloquent\Builder;
@@ -16,30 +17,25 @@ class DefaultSortScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-
-
-        if(! property_exists($model, 'defaultSort')) {
+        if (!property_exists($model, 'defaultSort')) {
             throw new DefaultSortException('To use the DefaultSort trait you need to declare the property "defaultSort"');
         }
 
         $columns = $model->defaultSort;
 
-        if(! is_array($columns)) {
+        if (!is_array($columns)) {
             $columns = [$columns];
         }
 
-
-        foreach($columns as $column => $method) {
-            if(($method == 'DESC' || $method == 'ASC') && $column) {
+        foreach ($columns as $column => $method) {
+            if (($method == 'DESC' || $method == 'ASC') && $column) {
                 $builder->orderBy($column, $method);
-            }
-            else {
+            } else {
                 // In this case the Method is actually the column.
-                if($method) {
+                if ($method) {
                     $builder->orderBy($method);
                 }
             }
         }
     }
-
 }

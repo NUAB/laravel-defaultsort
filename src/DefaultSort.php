@@ -1,4 +1,5 @@
 <?php
+
 namespace HeppyEkberg\DefaultSort;
 
 /**
@@ -30,7 +31,8 @@ namespace HeppyEkberg\DefaultSort;
  */
 trait DefaultSort
 {
-    public static function bootDefaultSort() {
+    public static function bootDefaultSort()
+    {
         static::addGlobalScope(new DefaultSortScope);
     }
 }
